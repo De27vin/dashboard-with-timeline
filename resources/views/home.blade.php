@@ -8,6 +8,11 @@
     @vite('resources/js/app.js')
 </head>
 <body>
+
+    <div id="app">
+        <example-component></example-component>
+    </div>
+
     <div class="mt-12"></div>
     <!-- Grid mit farbigen Kästchen -->
     <div class="grid grid-cols-5 gap-3 w-11/12 mx-auto">
