@@ -1,16 +1,32 @@
 import './bootstrap';
-import { createApp } from 'vue';
+import { createApp, reactive } from 'vue';
 
-import ExampleComponent from './components/ExampleComponent.vue';
-import TimeLineComponent from './components/TimeLineComponent.vue';
+import TimeLineSlider from './components/TimeLineSlider.vue';
+import TimeLine from './components/TimeLine.vue';
 
-const app = createApp({});
+// Zeistrahl ein/aus erlauben
+const sliderState = reactive({
+    timelineVisible: false,
+})
+  
+// Mount für den Schalter
+const sliderApp = createApp({
+    components: { TimeLineSlider },
+    provide() {
+        return {
+            sliderState,
+        };
+    },
+});
+sliderApp.mount('#app-slider');
 
-// Welcoming with week day
-app.component('example-component', ExampleComponent);
-
-// Timeline with button to fold it out
-app.component('timeline-component', TimeLineComponent);
-
-
-app.mount('#app');
+// Mount für Zeitstrahl
+const timelineApp = createApp({
+    components: { TimeLine },
+    provide() {
+        return {
+            sliderState,
+        };
+    },
+});
+timelineApp.mount('#app-timeline');
