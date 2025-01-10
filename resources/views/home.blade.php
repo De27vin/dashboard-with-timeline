@@ -10,7 +10,7 @@
 <body>
 
     <div id="app">
-        <example-component></example-component>
+        <timeline-component></timeline-component>
     </div>
 
     <div class="mt-12"></div>
