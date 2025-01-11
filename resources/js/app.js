@@ -1,32 +1,17 @@
-import './bootstrap';
-import { createApp, reactive } from 'vue';
+import { createApp } from 'vue';
 
 import TimeLineSlider from './components/TimeLineSlider.vue';
 import TimeLine from './components/TimeLine.vue';
+import mitt from 'mitt';
 
-// Zeistrahl ein/aus erlauben
-const sliderState = reactive({
-    timelineVisible: false,
-})
-  
-// Mount für den Schalter
-const sliderApp = createApp({
-    components: { TimeLineSlider },
-    provide() {
-        return {
-            sliderState,
-        };
-    },
-});
-sliderApp.mount('#app-slider');
+const emitter = mitt();
+
+// Mount für Schalter
+const timelineSliderApp = createApp(TimeLineSlider);
+timelineSliderApp.config.globalProperties.emitter = emitter;
+timelineSliderApp.mount('#timeline-slider');
 
 // Mount für Zeitstrahl
-const timelineApp = createApp({
-    components: { TimeLine },
-    provide() {
-        return {
-            sliderState,
-        };
-    },
-});
-timelineApp.mount('#app-timeline');
+const timelineApp = createApp(TimeLine);
+timelineApp.config.globalProperties.emitter = emitter;
+timelineApp.mount('#timeline');

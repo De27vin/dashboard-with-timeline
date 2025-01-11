@@ -10,10 +10,7 @@
         <timeline
         :timelineVisible="timelineVisible"
         ></timeline>
-
-
     </div>
-
 </template>
 
 <script>
@@ -34,8 +31,7 @@ export default {
     methods: {
         toggleTimeline() {
             this.timelineVisible = !this.timelineVisible;
-        }
-    }
-}
-
+        },
+    },
+};
 </script>
