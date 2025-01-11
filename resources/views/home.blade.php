@@ -18,11 +18,7 @@
 
             <div class="grid grid-cols-2">
                 <a class="text-2xl">Anlagen<br></a>
-                <div class="justify-self-end" id="timeline-slider"></div>
-
-                <timeline-slider></timeline-slider>
-                <timeline></timeline>
-
+                <div class="justify-self-end" id="timeline-slider1"></div>
             </div>
             <div class="grid grid-cols-2">
                 <a>aktiviert<br></a>
@@ -34,7 +30,11 @@
 
         <!-- Kästchen 2 -->
         <div class="bg-red-200 px-3 py-2">
-            <a class="text-2xl">Notrufe<br></a>
+
+            <div class="grid grid-cols-2">
+                <a class="text-2xl">Notrufe<br></a>
+                <div class="justify-self-end" id="timeline-slider2"></div>
+            </div>
             <div class="grid grid-cols-2">
                 <a>eingehende Anrufe<br></a>
                 <a class="justify-self-end">0</a>
@@ -45,7 +45,11 @@
 
         <!-- Kästchen 3 -->
         <div class="bg-blue-200 px-3 py-2">
-            <a class="text-2xl">Überfällig<br></a>
+
+            <div class="grid grid-cols-2">
+                <a class="text-2xl">Überfällig<br></a>
+                <div class="justify-self-end" id="timeline-slider3"></div>
+            </div>
             <div class="grid grid-cols-2">
                 <a>Routinerufe<br></a>
                 <a class="justify-self-end">19</a>
@@ -56,7 +60,11 @@
 
         <!-- Kästchen 4 -->
         <div class="bg-orange-200 px-3 py-2">
-            <a class="text-2xl">Alarme<br></a>
+
+            <div class="grid grid-cols-2">
+                <a class="text-2xl">Alarme<br></a>
+                <div class="justify-self-end" id="timeline-slider4"></div>
+            </div>
             <div class="grid grid-cols-2">
                 <a>kritisch<br></a>
                 <a class="justify-self-end">29</a>
@@ -67,7 +75,11 @@
 
         <!-- Kästchen 5 -->
         <div class="bg-green-200 px-3 py-2">
-            <a class="text-2xl">Service Level<br></a>
+
+            <div class="grid grid-cols-2">
+                <a class="text-2xl">Service Level<br></a>
+                <div class="justify-self-end" id="timeline-slider5"></div>
+            </div>
             <div class="grid grid-cols-2">
                 <a>Routinerufe<br></a>
                 <a class="justify-self-end">9%</a>
@@ -79,6 +91,11 @@
 
     <!-- Zeitstrahl Komponente -->
     <div id="timeline"></div>
+    <div id="timeline2"></div>
+    <div id="timeline3"></div>
+    <div id="timeline4"></div>
+    <div id="timeline5"></div>
+
 </div>
     
 </body>
