@@ -2,17 +2,19 @@
     <!-- Zeitstrahl -->
     <div 
         v-if="timelineVisible" 
-        class="grid grid-cols-3 mt-4 w-11/12 mx-auto bg-gray-100 p-6 rounded shadow-md transition-all"
+        class="mt-4 w-11/12 mx-auto bg-gray-100 p-6 rounded shadow-md transition-all"
     >
-        <h2 class="text-xl font-bold mb-4">Zeitstrahl</h2>
-            <div class="mx-auto"> <!--Dies sollte in der Mitte sein vom gesamten container, der Zeitstrahl so wie jetzt (links)-->
+        <!-- Titel und Knöpfe -->
+        <div class="grid grid-cols-3 flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold mb-4">Zeitstrahl</h2>
+            <div class="mx-auto">
                 <button class="ml-1 mt-1 text-xl bg-blue-300 px-2 rounded-md inline-block hover:bg-gray-400">24std</button>
                 <button class="ml-2 mt-1 text-xl bg-gray-300 px-2 rounded-md inline-block hover:bg-gray-400">7T</button>
                 <button class="ml-2 mt-1 text-xl bg-gray-300 px-2 rounded-md inline-block hover:bg-gray-400">30T</button>
             </div>
         </div>
 
-        <div class="h-64 bg-gray-200 rounded-lg flex w-11/12 mx-auto">
+        <div class="h-64 bg-gray-200 rounded-lg flex w-full mx-auto">
 
             <!-- Balken-Diagramm -->
         <div class="flex flex-col items-center w-full rounded-lg shadow-xl sm:p-8">
@@ -70,8 +72,8 @@
 		    	</div>
 		    </div>
 	    </div>
-
         </div>
+    </div>
 </template>
 
 <script>
