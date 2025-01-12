@@ -10,7 +10,7 @@
             >
                 <!-- Quadrat im Schalter --> 
                 <div class="w-4 h-4 bg-white shadow-md"
-                    :class="{'translate-x-5': timelineVisible4}"
+                    :class="{'translate-x-6': timelineVisible4}"
                 ></div>
             </div>
         </button>

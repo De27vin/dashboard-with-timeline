@@ -15,7 +15,10 @@
         "vite": "^6.0.7"
     },
     "dependencies": {
+        "@canvasjs/charts": "^3.10.21",
+        "@canvasjs/vue-charts": "^1.0.4",
         "@vitejs/plugin-vue": "^5.2.1",
+        "chart.js": "^4.4.7",
         "mitt": "^3.0.1",
         "vue": "^3.5.13"
     }
